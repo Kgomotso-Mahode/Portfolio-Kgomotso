@@ -1,0 +1,172 @@
+:root{
+--bg-color:#ffffff;
+--text-color:#222;
+--highlight:#e8f2ff;
+}
+
+@media (prefers-color-scheme: dark){
+
+:root{
+--bg-color:#121212;
+--text-color:#f5f5f5;
+--highlight:#2a2a2a;
+}
+
+}
+
+body{
+background:var(--bg-color);
+color:var(--text-color);
+font-family:system-ui;
+}
+
+/* Skip link */
+
+.skip-link{
+position:absolute;
+left:-999px;
+}
+
+.skip-link:focus{
+left:10px;
+top:10px;
+background:black;
+color:white;
+padding:8px;
+}
+
+/* Hero */
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url("https://images.pexels.com/photos/5380603/pexels-photo-5380603.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* ensures the image fully covers the section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hero-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero-content h1{
+font-size:3rem;
+font-weight:bold;
+}
+.education-text{
+margin-top:0;
+line-height:1.5;
+}
+.hero-content h1{
+  font-size: clamp(2rem, 5vw, 3rem); /* scales nicely from mobile → desktop */
+  font-weight:bold;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* extra readability */
+}
+
+.hero-content p.lead {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+/* About label */
+
+.highlight-label{
+display:inline-block;
+background:var(--highlight);
+padding:6px 14px;
+border-radius:6px;
+font-weight:600;
+color: #444;
+}
+
+
+.education-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.education-list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.education-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+
+.project-img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    #skills h2 {
+        font-size: 1.8rem;
+    }
+
+    #skills h3 {
+        font-size: 1.2rem;
+    }
+
+    #skills li {
+        font-size: 0.9rem;
+    }
+}
+/* Projects */
+
+.project-img{
+height:200px;
+object-fit:cover;
+}
+
+/* Icons */
+
+.icon-link{
+font-size:28px;
+margin:0 10px;
+color:inherit;
+}
+
+.icon-link:hover{
+color:#0d6efd;
+}
+
+/* Contact form */
+
+.contact-form{
+max-width:500px;
+}
+
+/* Footer */
+
+.footer{
+background:#111;
+color:#ccc;
+padding:15px;
+}
